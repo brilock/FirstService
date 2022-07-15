@@ -1,4 +1,4 @@
-module brilock/first-service
+module github.com/brilock/FirstService
 
 go 1.18
 
