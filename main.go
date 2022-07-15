@@ -1,10 +1,11 @@
 package brilock
 
 import (
-	//"FirstService/handlers"
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/brilock/FirstService/handlers"
 )
 
 func main() {
