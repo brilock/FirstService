@@ -7,10 +7,14 @@ import (
 	"os"
 
 	"github.com/brilock/FirstService/handlers"
+	"github.com/brilock/FirstService/version"
 )
 
 func main() {
-	log.Print("Starting the service...")
+	log.Printf(
+		"Starting the service...\ncommit: %s, build time: %s, release: %s",
+		version.Commit, version.BuildTime, version.Release,
+	)
 
 	port := os.Getenv("PORT")
 	if port == "" {
