@@ -1,4 +1,4 @@
-package brilock
+package main
 
 import (
 	"fmt"
