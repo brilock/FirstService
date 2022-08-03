@@ -5,11 +5,16 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+	"time"
 )
 
 func TestHome(t *testing.T) {
 	w := httptest.NewRecorder()
-	home(w, nil)
+	buildTime := time.Now().Format("20060102_03:04:05")
+	commit := "test commit"
+	release := "0.0.1"
+	h := home(buildTime, commit, release)
+	h(w, nil)
 
 	resp := w.Result()
 	if have, want := resp.StatusCode, http.StatusOK; have != want {
